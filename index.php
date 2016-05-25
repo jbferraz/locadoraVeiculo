@@ -1,0 +1,28 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <head>
+        <title>Locadora de Veículos</title>
+        <link href="config/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><!-- define todo conteúdo da pág. -->
+        <div id="cabecalho">
+            <div id="topo">
+                <h1>
+                    .: Locadora de Veículos :.<p>
+                        <script language="JavaScript">
+                            var d = new Date();
+                            document.write("Bem vindo!!! - " + d.toLocaleString());
+                        </script>
+                </h1>
+            </div>
+        </div>
+        <div id="conteudo" align="center">
+            <div id="um">
+                <p>
+                    <a href="listaVeicDisp.html">-- Visualiza Veículos --</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

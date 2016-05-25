@@ -1,0 +1,94 @@
+@charset "utf-8";
+body {
+	background-color: Aquamarine;
+	margin: 0px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+}
+
+#cabecalho {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 20;
+	height: 225px;
+	width: 100%;
+	background-color: Aquamarine;
+}
+
+#topo {
+	height: 150px;
+	width: 960px;
+	margin: auto;
+	text-align: center;
+	padding-top: 25px;
+}
+
+#conteudo {
+	width: 960px;
+	margin: auto;
+	padding-top: 225px;
+}
+
+#conteudo p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#conteudo p2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	padding-right: 20px;
+	padding-left: 20px;
+	white-space: pre ;
+}
+
+
+#conteudo #um {
+	float: left;
+	height: 160px;
+	width: 960px;
+	clear: right;
+}
+
+#conteudo #dois {
+	float: left;
+	height: 160px;
+	width: 960px;
+	clear: right;
+}
+
+#conteudo #tres {
+	float: left;
+	height: 160px;
+	width: 960px;
+	clear: right;
+}
+
+#conteudo #quatro {
+	float: left;
+	height: 170px;
+	width: 960px;
+	clear: right;
+}
+
+#conteudo #dois input[type=text] {
+	position: absolute;
+	right: 1px;
+	width: 10%;
+	padding: 2px 8px;
+	margin: 0px 950px 3px 2px;
+	box-sizing: border-box;
+	border: 1px solid #1F5693;
+}
+
+#conteudo #dois select[type=text] {
+	position: absolute;
+	right: 1px;
+	width: 10%;
+	padding: 2px 8px;
+	margin: 0px 950px 3px 2px;
+	box-sizing: border-box;
+	border: 1px solid #1F5693;
+}
