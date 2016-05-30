@@ -16,6 +16,13 @@ body {
 	background-color: Aquamarine;
 }
 
+#cabecalho menu {
+	float: left;
+	height: 50px;
+	width: 960px;
+	clear: right;
+}
+
 #topo {
 	height: 150px;
 	width: 960px;
@@ -30,6 +37,34 @@ body {
 	padding-top: 225px;
 }
 
+#conteudo #um {
+	float: left;
+	height: 100px;
+	width: 960px;
+	clear: right;
+}
+
+#conteudo #dois {
+	float: left;
+	height: 200px;
+	width: 960px;
+	clear: right;
+}
+
+#conteudo #tres {
+	float: left;
+	height: 200px;
+	width: 960px;
+	clear: right;
+}
+
+#conteudo #quatro {
+	float: left;
+	height: 170px;
+	width: 960px;
+	clear: right;
+}
+
 #conteudo p {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 14px;
@@ -42,35 +77,6 @@ body {
 	padding-right: 20px;
 	padding-left: 20px;
 	white-space: pre ;
-}
-
-
-#conteudo #um {
-	float: left;
-	height: 160px;
-	width: 960px;
-	clear: right;
-}
-
-#conteudo #dois {
-	float: left;
-	height: 160px;
-	width: 960px;
-	clear: right;
-}
-
-#conteudo #tres {
-	float: left;
-	height: 160px;
-	width: 960px;
-	clear: right;
-}
-
-#conteudo #quatro {
-	float: left;
-	height: 170px;
-	width: 960px;
-	clear: right;
 }
 
 #conteudo #dois input[type=text] {
