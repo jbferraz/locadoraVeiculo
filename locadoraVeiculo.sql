@@ -65,3 +65,8 @@ CREATE TABLE Veiculo (
 );
 
 
+INSERT INTO categoriaVeiculo (descVeiculo) VALUES ('Passeio');
+
+INSERT INTO Marca (nomeMarca) VALUES ('GM');
+
+INSERT INTO Veiculo VALUES (1,1,1,'Celta',2015,'Preto',4,'','iep0598',500,50,1);
