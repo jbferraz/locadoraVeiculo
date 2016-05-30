@@ -1,2 +1,3 @@
 <?php
-<a href="views/listaVeicDisp.php">-- Visualiza Veículos --</a>
+
+<a href = "views/listaVeicDisp.php"> --Visualiza Veículos --</a>
