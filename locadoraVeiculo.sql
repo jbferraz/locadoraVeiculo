@@ -1,7 +1,7 @@
 CREATE TABLE categoriaVeiculo (
-  idcategoriaVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  idCategoriaVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   descVeiculo VARCHAR(20) NOT NULL,
-  PRIMARY KEY(idcategoriaVeiculo)
+  PRIMARY KEY(idCategoriaVeiculo)
 );
 
 CREATE TABLE Cliente (
@@ -26,7 +26,7 @@ CREATE TABLE Locacao (
   dataDevolucao DATE NOT NULL,
   kmRetirada INTEGER UNSIGNED NULL,
   kmDevolucao INTEGER UNSIGNED NULL,
-  knLivre BOOL NULL,
+  kmLivre BOOL NULL,
   PRIMARY KEY(idLocacao),
   INDEX Locacao_FKIndex1(Cliente_idCliente),
   INDEX Locacao_FKIndex2(Veiculo_idVeiculo)
@@ -38,7 +38,7 @@ CREATE TABLE Marca (
   PRIMARY KEY(idMarca)
 );
 
-CREATE TABLE usuario (
+CREATE TABLE Usuario (
   idUsuario INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nomeUsuario VARCHAR(45) NOT NULL,
   usuario VARCHAR(20) NOT NULL,
@@ -48,8 +48,8 @@ CREATE TABLE usuario (
 
 CREATE TABLE Veiculo (
   idVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  categoriaVeiculo_idcategoriaVeiculo INTEGER UNSIGNED NOT NULL,
-  Marca_idMarca INTEGER UNSIGNED NOT NULL,
+  categoriaVeiculo_idCategoriaVeiculo INTEGER UNSIGNED NOT NULL,
+  marca_idMarca INTEGER UNSIGNED NOT NULL,
   modelo VARCHAR(20) NOT NULL,
   ano INTEGER UNSIGNED NOT NULL,
   cor VARCHAR(20) NOT NULL,
@@ -57,11 +57,11 @@ CREATE TABLE Veiculo (
   opcionais VARCHAR(255) NULL,
   placa VARCHAR(7) NOT NULL,
   valorLivre INTEGER UNSIGNED NOT NULL,
-  valorKM NUMERIC NOT NULL,
+  valorKm NUMERIC NOT NULL,
   disponivel BOOL NULL,
   PRIMARY KEY(idVeiculo),
-  INDEX Veiculo_FKIndex1(Marca_idMarca),
-  INDEX Veiculo_FKIndex2(categoriaVeiculo_idcategoriaVeiculo)
+  INDEX Veiculo_FKIndex1(marca_idMarca),
+  INDEX Veiculo_FKIndex2(categoriaVeiculo_idCategoriaVeiculo)
 );
 
 
