@@ -38,6 +38,12 @@ class veiculo {
         return $this->$prop;
     }
 
+    public function __toString() {
+        return "ID: " . $this->idVeiculo . "<br>Marca: " . $this->marca_idMarca . "<br>Modelo: " . $this->modelo 
+                . "<br>Ano: " . $this->ano . "<br>Cor: " . $this->cor . "<br>Portas: " . $this->portas . "<br>Opcionais: " . $this->opcionais
+                . "<br>Placa: " . $this->placa . "<br>Valor KM Livre: " . $this->valorLivre . "<br>Valor KM: " . $this->valorKm . "<br>Disponivel: " . $this->disponivel;
+    }
+
 }
 
 ?>
