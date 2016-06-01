@@ -48,7 +48,7 @@ CREATE TABLE Usuario (
 
 CREATE TABLE Veiculo (
   idVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  categoriaVeiculo_idCategoriaVeiculo INTEGER UNSIGNED NOT NULL,
+  categoriaVeiculo_idCatVeiculo INTEGER UNSIGNED NOT NULL,
   marca_idMarca INTEGER UNSIGNED NOT NULL,
   modelo VARCHAR(20) NOT NULL,
   ano INTEGER UNSIGNED NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE Veiculo (
   disponivel BOOL NULL,
   PRIMARY KEY(idVeiculo),
   INDEX Veiculo_FKIndex1(marca_idMarca),
-  INDEX Veiculo_FKIndex2(categoriaVeiculo_idCategoriaVeiculo)
+  INDEX Veiculo_FKIndex2(categoriaVeiculo_idCatVeiculo)
 );
 
 
