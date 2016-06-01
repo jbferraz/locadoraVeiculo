@@ -1,6 +1,6 @@
 CREATE TABLE categoriaVeiculo (
-  idCategoriaVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  descVeiculo VARCHAR(20) NOT NULL,
+  idCatVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  descCatVeiculo VARCHAR(20) NOT NULL,
   PRIMARY KEY(idCategoriaVeiculo)
 );
 
