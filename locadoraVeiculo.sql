@@ -26,7 +26,7 @@ CREATE TABLE Locacao (
   dataDevolucao DATE NOT NULL,
   kmRetirada INTEGER UNSIGNED NULL,
   kmDevolucao INTEGER UNSIGNED NULL,
-  kmLivre BOOL NULL,
+  kmLivre BOOLean NULL,
   PRIMARY KEY(idLocacao),
   INDEX Locacao_FKIndex1(Cliente_idCliente),
   INDEX Locacao_FKIndex2(Veiculo_idVeiculo)
@@ -58,7 +58,7 @@ CREATE TABLE Veiculo (
   placa VARCHAR(7) NOT NULL,
   valorLivre INTEGER UNSIGNED NOT NULL,
   valorKm NUMERIC NOT NULL,
-  disponivel BOOL NULL,
+  disponivel BOOLean NULL,
   PRIMARY KEY(idVeiculo),
   INDEX Veiculo_FKIndex1(marca_idMarca),
   INDEX Veiculo_FKIndex2(categoriaVeiculo_idCatVeiculo)
