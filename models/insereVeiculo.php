@@ -14,7 +14,8 @@
 
     <table align=‘center'>
         <tr><td align='center'>
-                <div>
+                <div id="quatro">
+                    
                     <form action="veiculoInserido.php">
                         <label for="categoria">Categoria</label>
                         <select name="categoriaveiculo">
