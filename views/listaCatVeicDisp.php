@@ -18,15 +18,16 @@
     <body>
         <center>
             <table align=‘center'>
+                <center>
+                    <h1>Mostra os Categorias Disponiveis</h1>
+                </center>
                 <tr><td align='center'>
                         <div id="quatro"> 
                             <form>
-
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
                                 $resultado = mysql_query("Select * from categoriaveiculo order by descCatVeiculo") or die("Não é possível consultar categoria de veículos.");
-                                print("<center><h2>Mostra os Categorias Disponiveis</h2>");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
                                 print("<td><b>Descrição Categoria</td>");
