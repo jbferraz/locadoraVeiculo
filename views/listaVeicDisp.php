@@ -20,7 +20,7 @@
             <table align=‘center'>
                 <tr><td align='center'>
                         <div id="quatro"> 
-                            <<form>
+                            <form>
 
                                 <?php
                                 require("../controller/conecta.inc");
