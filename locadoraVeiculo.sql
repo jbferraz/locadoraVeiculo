@@ -1,7 +1,7 @@
 CREATE TABLE categoriaVeiculo (
   idCatVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   descCatVeiculo VARCHAR(20) NOT NULL,
-  PRIMARY KEY(idCategoriaVeiculo)
+  PRIMARY KEY(idCatVeiculo)
 );
 
 CREATE TABLE Cliente (
@@ -65,7 +65,7 @@ CREATE TABLE Veiculo (
 );
 
 
-INSERT INTO categoriaVeiculo (descVeiculo) VALUES ('Passeio');
+INSERT INTO categoriaVeiculo (descCatVeiculo) VALUES ('Passeio');
 
 INSERT INTO Marca (nomeMarca) VALUES ('GM');
 

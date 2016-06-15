@@ -1,5 +1,6 @@
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+    <meta charset="UTF-8" http-equiv="Content-Type">
     <style type="text/css">
         @import '../config/style.css';
     </style>
