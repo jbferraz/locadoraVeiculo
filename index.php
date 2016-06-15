@@ -33,7 +33,7 @@ session_start();
                 </h1>
             </div>
             <div id="conteudo">
-                <a href="views/listaVeicDisp.php">Mostrar Veículos Disponiveis</a>
+                <a href="views/listaVeicDisp.php" class="button_voltar">Mostrar Veículos Disponiveis</a>
             </div>
 
         </div>

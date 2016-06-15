@@ -59,15 +59,16 @@
 
                         <input type="submit" value="Inserir Veículo" >
                         <p>
-                        <a href="../views/listaVeicDisp.php" class="button_voltar">Voltar</a>
+                        <a href="../views/listaVeicDisp.php" class="button_voltar" >Voltar</a>
+                        </p>
 
                     </form>
                 </div>
             </td></tr>
     </table>
-
-    </body>        
-
 </center>
+</body>        
+
+
 
 </html>

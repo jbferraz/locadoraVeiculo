@@ -29,7 +29,7 @@
             print('<script type="text/javascript">alert("Veículo inserido com sucesso: $placa")</script>');
         }
         ?>
-        
-        <meta http-equiv="refresh" content="4 ;../views/listaVeicDisp.php">
-        <p><a href="inserirVeiculo.php">Voltar</a>
-            <p><a href="../views/listaVeicDisp.php">Mostrar</a>
+
+        <meta http-equiv="refresh" content="2 ;../views/listaVeicDisp.php">
+            <p><a href="inserirVeiculo.php">Voltar</a>
+                <p><a href="../views/listaVeicDisp.php">Mostrar</a>
