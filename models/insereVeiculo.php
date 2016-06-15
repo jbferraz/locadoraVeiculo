@@ -1,35 +1,30 @@
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
     <meta charset="UTF-8" http-equiv="Content-Type">
     <style type="text/css">
         @import '../config/style.css';
     </style>
     <head>
-    <br>
-    <center>
-        <h1>Cadastrar Veículo</h1>
-    </cente>
-</head>
+        <center>
+            <h1>Cadastrar Veículo</h1>
+        </center>
+    </head>
 <body>
 <center>
-
     <table align=‘center'>
         <tr><td align='center'>
-                <div id="quatro">
-                    
+                <div id="quatro"> 
                     <form action="veiculoInserido.php">
                         <label for="categoria">Categoria</label>
                         <select name="categoriaveiculo">
                             <?php
-                            require("../controller/conecta.inc");
-                            conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                            $result = mysql_query("Select * from categoriaveiculo order by descCatVeiculo") or die("Não é possível consultar marca.");
-                            while ($linha = \mysql_fetch_array($result)) {
-                                $idCatVeiculoD = $linha["idCatVeiculo"];
-                                $descCatVeiculoD = $linha["descCatVeiculo"];
-                                print("<option value='$idCatVeiculoD'>$descCatVeiculoD</option>");
-                            }
-                            
+                                require("../controller/conecta.inc");
+                                conecta_bd() or die("Não é possível conectar-se ao servidor.");
+                                $result = mysql_query("Select * from categoriaveiculo order by descCatVeiculo") or die("Não é possível consultar marca.");
+                                while ($linha = \mysql_fetch_array($result)) {
+                                    $idCatVeiculoD = $linha["idCatVeiculo"];
+                                    $descCatVeiculoD = $linha["descCatVeiculo"];
+                                    print("<option value='$idCatVeiculoD'>$descCatVeiculoD</option>");
+                                }
                             ?>
                         </select>
                         <label for="marca">Marca</label>
@@ -62,7 +57,8 @@
                             <option value='1'>Sim</option>
                         </select>
 
-                        <input type="submit" value="Inserir Veículo">
+                        <input type="submit" value="Inserir Veículo" >
+                        <p>
                         <a href="../views/listaVeicDisp.php" class="button_voltar">Voltar</a>
 
                     </form>
@@ -71,7 +67,7 @@
     </table>
 
     </body>        
-    <br>
+
 </center>
 
 </html>

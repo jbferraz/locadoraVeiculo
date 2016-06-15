@@ -4,32 +4,32 @@
         @import '../config/style.css';
     </style>
     <head>
-    <center>
-        <h1>Alterar Veículo</h1>
-    </cente>
-</head>
+        <center>
+            <h1>Alterar Veículo</h1>
+        </center>
+    </head>
 <body>
 <center>
     <table align=‘center'>
         <tr><td align='center'>
                 <div id="quatro">
                     <?php
-                    $cod = $_GET['cod'];
-                    require("../controller/conecta.inc");
-                    conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                    $resultado1 = mysql_query("Select * from marca,veiculo,categoriaveiculo where veiculo.marca_idMarca=marca.idMarca AND veiculo.categoriaVeiculo_idCatVeiculo = categoriaveiculo.idCatVeiculo AND idVeiculo ='$cod'") or die("Não é possível retornar dados do funcionário!");
-                    $linha = mysql_fetch_array($resultado1);
-                    $Codigo = $linha["idVeiculo"];
-                    $modelo = $linha["modelo"];
-                    $categoriaveiculo = $linha["descCatVeiculo"];
-                    $cor = $linha["cor"];
-                    $ano = $linha["ano"];
-                    $placa = $linha["placa"];
-                    $idMarca = $linha["idMarca"];
-                    $idCatVeiculo = $linha["idCatVeiculo"];
-                    $nomeMarca = $linha["nomeMarca"];
-                    $disponibilidade = $linha["disponivel"];
-                    print("<h3>Alterar dados do veículo:</h3><p>");
+                        $cod = $_GET['cod'];
+                        require("../controller/conecta.inc");
+                        conecta_bd() or die("Não é possível conectar-se ao servidor.");
+                        $resultado1 = mysql_query("Select * from marca,veiculo,categoriaveiculo where veiculo.marca_idMarca=marca.idMarca AND veiculo.categoriaVeiculo_idCatVeiculo = categoriaveiculo.idCatVeiculo AND idVeiculo ='$cod'") or die("Não é possível retornar dados do funcionário!");
+                        $linha = mysql_fetch_array($resultado1);
+                        $Codigo = $linha["idVeiculo"];
+                        $modelo = $linha["modelo"];
+                        $categoriaveiculo = $linha["descCatVeiculo"];
+                        $cor = $linha["cor"];
+                        $ano = $linha["ano"];
+                        $placa = $linha["placa"];
+                        $idMarca = $linha["idMarca"];
+                        $idCatVeiculo = $linha["idCatVeiculo"];
+                        $nomeMarca = $linha["nomeMarca"];
+                        $disponibilidade = $linha["disponivel"];
+                        print("<h3>Alterar dados do veículo:</h3><p>");
                     ?>
                    
                     
