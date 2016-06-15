@@ -5,20 +5,19 @@ session_start();
 <!DOCTYPE html>
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
     <head>
-        <meta charset="UTF-8" http-equiv="Content-Type">
-            <style type="text/css">
-                @import 'config/style.css';
-            </style>
-            <script type="text/javascript">
+        <style type="text/css">
+            @import 'config/style.css';
+        </style>
+        <script type="text/javascript">
 
-                window.onload = function () {
-                    document.getElementById("categoria").onchange = function () {
-                        this.parentNode.action = this.value + ".php";
-                    }
+            window.onload = function () {
+                document.getElementById("categoria").onchange = function () {
+                    this.parentNode.action = this.value + ".php";
                 }
-            </script>
-            <title>Locadora de Veículos</title>
-            <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+            }
+        </script>
+        <title>Locadora de Veículos</title>
+        <meta charset="UTF-8" http-equiv="Content-Type" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
     </head>
 
     <body>

@@ -1,12 +1,17 @@
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+    <head>
+        <meta charset="UTF-8" http-equiv="Content-Type">
+            <style type="text/css">
+                @import '../config/style.css';
+            </style>
 
-    <meta charset="UTF-8" http-equiv="Content-Type">
-        <style type="text/css">
-            @import '../config/style.css';
-        </style>
+
+            <title>Veículo cadastrado</title>
 
 
-        <title>Veículo cadastrado</title>
+            <meta http-equiv="refresh" content="2 ;../views/listaVeicDisp.php"/>
+    </head>
+    <body>
         <?php
         $modelo = $_GET['modelo'];
         $categoriaveiculo = $_GET ['categoriaveiculo'];
@@ -29,7 +34,7 @@
             print('<script type="text/javascript">alert("Veículo inserido com sucesso: $placa")</script>');
         }
         ?>
-
-        <meta http-equiv="refresh" content="2 ;../views/listaVeicDisp.php">
-            <p><a href="inserirVeiculo.php">Voltar</a>
-                <p><a href="../views/listaVeicDisp.php">Mostrar</a>
+        <p><a href="inserirVeiculo.php">Voltar</a></p>
+        <p><a href="../views/listaVeicDisp.php">Mostrar</a></p>
+    </body>
+</html>
