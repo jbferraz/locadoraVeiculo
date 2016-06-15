@@ -51,7 +51,7 @@
                                     print("<td>$Cor</td>");
                                     print("<td>$Portas</td>");
                                     print("<td>$Opcionais</td>");
-                                    print("<td><a href='deletarf.php?cod=$Codigo'>Deletar</a></td>"); //Refatorar Deletar
+                                    print("<td><a href='../models/deletaVeiculo.php?cod=$Codigo'>Deletar</a></td>"); //Refatorar Deletar
                                     print("<td><a href='../models/alteraVeiculo.php?cod=$Codigo'>Alterar</a></td></tr>"); //Refatorar Alterar
                                 }
                                 print("</table></center>");
