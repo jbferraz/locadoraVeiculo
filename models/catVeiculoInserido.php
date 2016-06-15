@@ -5,7 +5,7 @@
                 @import '../config/style.css';
             </style>
             <title>Veículo cadastrado</title>
-            <meta http-equiv="refresh" content="2 ;../views/listaVeicDisp.php"/>
+            <meta http-equiv="refresh" content="0 ;../views/listaCatVeicDisp.php"/>
     </head>
     <body>
         <?php
@@ -21,6 +21,6 @@
         }
         ?>
         <p><a href="inserirCatVeiculo.php">Voltar</a></p>
-        <p><a href="../views/listaVeicDisp.php">Mostrar</a></p>
+        <p><a href="../views/listaCatVeicDisp.php">Mostrar</a></p>
     </body>
 </html>

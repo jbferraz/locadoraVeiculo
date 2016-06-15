@@ -4,12 +4,8 @@
             <style type="text/css">
                 @import '../config/style.css';
             </style>
-
-
             <title>Veículo cadastrado</title>
-
-
-            <meta http-equiv="refresh" content="2 ;../views/listaVeicDisp.php"/>
+            <meta http-equiv="refresh" content="0 ;../views/listaVeicDisp.php"/>
     </head>
     <body>
         <?php

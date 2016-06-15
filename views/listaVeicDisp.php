@@ -18,15 +18,16 @@
     <body>
         <center>
             <table align=‘center'>
+                <center>
+                    <h1>Mostra os Veículos Disponiveis</h1>
+                </center>
                 <tr><td align='center'>
                         <div id="quatro"> 
-                            <<form>
-
+                            <form>
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
                                 $resultado = mysql_query("Select * from veiculo, Marca where disponivel=1 and marca_idMarca=idMarca order by modelo") or die("Não é possível consultar veículos disponiveis.");
-                                print("<center><h2>Mostra os Veículos Disponiveis</h2>");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
                                 print("<td><b>Marca</td>");
@@ -56,7 +57,8 @@
                                 }
                                 print("</table></center>");
                                 ?>
-                                <a href="../index.php" class="button_voltar" >Voltar</a>
+                                <p><a href="../models/insereVeiculo.php" class="button_voltar" >Inserir</a></p>
+                                <p><a href="../index.php" class="button_voltar" >Voltar</a></p>
                             </form>
                         </div>
                     </td></tr>

@@ -4,13 +4,14 @@
             @import '../config/style.css';
         </style>
         <head>
-            <center>
-                <h1>Veículo DELETADO</h1>
-            </center>
+
+            <meta http-equiv="refresh" content="0 ;../views/listaVeicDisp.php">
         </head>
         <body>
             <center>
-
+                <center>
+                    <h1>Veículo DELETADO</h1>
+                </center>
                 <?php
                 $cod = $_GET['cod_del'];
                 require("../controller/conecta.inc");
@@ -19,7 +20,7 @@
                 print('<script type="text/javascript">alert("Veículo Deletado com sucesso: $placa")</script>');
                 ?>
 
-        <meta http-equiv="refresh" content="2 ;../views/listaVeicDisp.php">
+
             </center>
         </body> 
     </meta>
