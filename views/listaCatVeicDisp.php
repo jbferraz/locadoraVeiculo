@@ -16,10 +16,47 @@
             <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
     </head>
     <body>
+        <ul>
+           <li><a class="active" href="../views/listaVeicDisp.php">Veículos disponíveis</a></li>
+
+           <div class="dropdown">
+               <li><a class="dropbtn">Cliente</a>
+                   <div class="dropdown-content">
+                       <a href="../models/insereCliente.php">Inserir Cliente</a>
+                       <a href="../views/listaCliente.php">Listar Clientes</a>
+                   </div>
+               </li>
+           </div>
+           <div class="dropdown">
+               <li><a class="dropbtn">Veículo</a>
+                   <div class="dropdown-content">
+                       <a href="../models/insereVeiculo.php">Inserir Veículo</a>
+                       <a href="../views/listaVeicDisp.php">Listar Veículos</a>
+
+                   </div>
+               </li>
+           </div>
+           <div class="dropdown">
+               <li><a class="dropbtn">Marca</a>
+                   <div class="dropdown-content">
+                       <a href="../models/insereMarca.php">Inserir Marca</a>
+                       <a href="../views/listaMarcaDisp.php">Listar Marcas</a>
+                   </div>
+               </li>
+           </div>
+           <div class="dropdown">
+               <li><a class="dropbtn">Categoria</a>
+                   <div class="dropdown-content">
+                       <a href="../models/insereCatVeiculo.php">Inserir Categoria</a>
+                       <a href="../views/listaCatVeicDisp.php">Listar Categorias</a>
+                   </div>
+               </li>
+           </div>
+       </ul>
         <center>
             <table align=‘center'>
                 <center>
-                    <h1>Mostra os Categorias Disponiveis</h1>
+                    <h1>Categorias de Veículos</h1>
                 </center>
                 <tr><td align='center'>
                         <div id="quatro"> 

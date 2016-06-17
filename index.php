@@ -21,6 +21,45 @@ session_start();
     </head>
 
     <body>
+        <ul>
+            <li><a class="active" href="views/listaVeicDisp.php">Veículos disponíveis</a></li>
+
+            <div class="dropdown">
+                <li><a class="dropbtn">Cliente</a>
+                    <div class="dropdown-content">
+                        <a href="../locadoraVeiculo/models/insereCatVeiculo.php">Inserir Categoria</a>
+                        <a href="../locadoraVeiculo/views/listaCatVeicDisp.php">Listar Categoria</a>
+                    </div>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a class="dropbtn">Veículo</a>
+                    <div class="dropdown-content">
+                        <a href="../locadoraVeiculo/models/insereCatVeiculo.php">Inserir Categoria</a>
+                        <a href="../locadoraVeiculo/views/listaCatVeicDisp.php">Listar Categoria</a>
+
+                    </div>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a class="dropbtn">Marca</a>
+                    <div class="dropdown-content">
+                        <a href="../locadoraVeiculo/models/insereCatVeiculo.php">Inserir Categoria</a>
+                        <a href="../locadoraVeiculo/views/listaCatVeicDisp.php">Listar Categoria</a>
+                    </div>
+                </li>
+            </div>
+
+
+            <div class="dropdown">
+                <li><a class="dropbtn">Categoria</a>
+                    <div class="dropdown-content">
+                        <a href="../locadoraVeiculo/models/insereCatVeiculo.php">Inserir Categoria</a>
+                        <a href="../locadoraVeiculo/views/listaCatVeicDisp.php">Listar Categoria</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
         <div id="corpo">
             <div id="topo">
                 <h1>
@@ -31,10 +70,6 @@ session_start();
                         </script>
                 </h1>
             </div>
-            <div id="conteudo">
-                <a href="views/listaVeicDisp.php" class="button_voltar">Mostrar Veículos Disponiveis</a>
-            </div>
-
         </div>
     </body>
 </html>

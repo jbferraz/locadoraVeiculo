@@ -20,7 +20,5 @@
             print('<script type="text/javascript">alert("Categoria Veículo inserida com sucesso: ")</script>');
         }
         ?>
-        <p><a href="inserirCatVeiculo.php">Voltar</a></p>
-        <p><a href="../views/listaCatVeicDisp.php">Mostrar</a></p>
     </body>
 </html>

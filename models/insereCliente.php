@@ -7,6 +7,45 @@
         <title>Cadastro de Clientes</title>
     </head>
     <body>
+         <ul>
+            <li><a class="active" href="../views/listaVeicDisp.php">Veículos disponíveis</a></li>
+
+            <div class="dropdown">
+                <li><a class="dropbtn">Cliente</a>
+                    <div class="dropdown-content">
+                        <a href="insereCliente.php">Inserir Cliente</a>
+                        <a href="../views/listaClientes.php">Listar Clientes</a>
+                    </div>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a class="dropbtn">Veículo</a>
+                    <div class="dropdown-content">
+                        <a href="../models/insereVeiculo.php">Inserir Veículo</a>
+                        <a href="../views/listaVeicDisp.php">Listar Veículos</a>
+
+                    </div>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a class="dropbtn">Marca</a>
+                    <div class="dropdown-content">
+                        <a href="../models/insereMarca.php">Inserir Marca</a>
+                        <a href="../views/listaMarcaDisp.php">Listar Marcas</a>
+                    </div>
+                </li>
+            </div>
+
+
+            <div class="dropdown">
+                <li><a class="dropbtn">Categoria</a>
+                    <div class="dropdown-content">
+                        <a href="../models/insereCatVeiculo.php">Inserir Categoria</a>
+                        <a href="../views/listaCatVeicDisp.php">Listar Categorias</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
     <center>
         <table align=‘center'>
             <center>
