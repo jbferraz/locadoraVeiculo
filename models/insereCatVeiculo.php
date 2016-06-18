@@ -14,7 +14,7 @@
                <li><a class="dropbtn">Cliente</a>
                    <div class="dropdown-content">
                        <a href="../models/insereCliente.php">Inserir Cliente</a>
-                       <a href="../views/listaCliente.php">Listar Clientes</a>
+                       <a href="../views/listaClientes.php">Listar Clientes</a>
                    </div>
                </li>
            </div>
