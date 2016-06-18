@@ -18,8 +18,9 @@
         $placa = $_GET['placa'];
         $marca = $_GET['marca'];
         $disponibilidade = $_GET['disponibilidade'];
-        if ($modelo == '' or $marca == '')
+        if ($modelo == '' or $marca == ''){
             print('<script type="text/javascript">alert("Faltou preencher algum campo")</script>');
+        }
         else {
             require("../controller/conecta.inc");
             conecta_bd() or die("Não é possível conectar-se ao servidor.");

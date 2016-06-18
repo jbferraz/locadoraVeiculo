@@ -5,27 +5,29 @@
                 @import '../config/style.css';
             </style>
             <title>Cliente Cadastrado</title>
-            <meta http-equiv="refresh" content="2 ;../views/listaClientes.php"/>
+            <meta http-equiv="refresh" content="0 ;../index.php"/>
     </head>
     <body>
         <?php
-        $nomeCliente = $_POST['nome'];
-        $nomeCliente = $_POST['CPF'];
-        $nomeCliente = $_POST['nome'];
-        $nomeCliente = $_POST['nome'];
-        $nomeCliente = $_POST['nome'];
-        
-        if ($nomeCliente == '')
-            print('<script type="text/javascript">alert("Faltou preencher Categoria de Veículo")</script>');
+        $nomeCliente = $_GET['nome'];
+        $cpf = $_GET['CPF'];
+        $telefone = $_GET['telefone'];
+        $celular = $_GET['celular'];
+        $endereco = $_GET['endereco'];
+        $email = $_GET['email'];
+        $dataNascimento = $_GET['dataNascimento'];
+        $sexo = $_GET['sexo'];
+        if ($nomeCliente == ''){
+            print('<script type="text/javascript">alert("Faltou preencher")</script>');
+        }
         else {
             require("../controller/conecta.inc");
             conecta_bd() or die("Não é possível conectar-se ao servidor.");
-            mysql_query("insert into cliente (nome,cpf,endereco,celular,telefone,email,dataNascimento,sexo) values ('$nomeCliente','$CP','$modelo','$cor','$ano','$opcionais','$portas','$placa','$disponibilidade')")
-                    or die('<script type="text/javascript">alert("Não é possível inserir o categoria veículo!")</script>');
-            print('<script type="text/javascript">alert("Categoria Veículo inserida com sucesso: ")</script>');
+            mysql_query("insert into cliente (nomeCliente,CPF,endereco,celular,telefone,email,dataNascimento,sexo) values ('$nomeCliente','$cpf','$endereco','$celular','$telefone','$email','$dataNascimento','$sexo')")
+                    or die('<script type="text/javascript">alert("Não é possível inserir o Cliente!")</script>');
+            print('<script type="text/javascript">alert("Cliente inserido com sucesso! ")</script>');
         }
         ?>
-        <p><a href="inserirCatVeiculo.php">Voltar</a></p>
-        <p><a href="../views/listaVeicDisp.php">Mostrar</a></p>
+       
     </body>
 </html>
