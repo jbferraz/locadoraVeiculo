@@ -5,7 +5,7 @@
                 @import '../config/style.css';
             </style>
             <title>Veículo cadastrado</title>
-            <meta http-equiv="refresh" content="0 ;../views/listaVeicDisp.php"/>
+            <meta http-equiv="refresh" content="0;../views/listaVeicDisp.php"/>
     </head>
     <body>
         <?php
@@ -17,6 +17,8 @@
         $portas = $_GET['portas'];
         $placa = $_GET['placa'];
         $marca = $_GET['marca'];
+        $valorKm = $_GET['valorKm'];
+        $valorLivre = $_GET['valorLivre'];
         $disponibilidade = $_GET['disponibilidade'];
         if ($modelo == '' or $marca == ''){
             print('<script type="text/javascript">alert("Faltou preencher algum campo")</script>');
@@ -25,13 +27,11 @@
             require("../controller/conecta.inc");
             conecta_bd() or die("Não é possível conectar-se ao servidor.");
 
-            mysql_query("insert into veiculo (marca_idMarca,categoriaVeiculo_idCatVeiculo, modelo, cor, ano, opcionais, portas, placa, disponivel) values ('$marca','$categoriaveiculo','$modelo','$cor','$ano','$opcionais','$portas','$placa','$disponibilidade')")
+                mysql_query("insert into veiculo (marca_idMarca,categoriaVeiculo_idCatVeiculo, modelo, cor, ano, opcionais, portas, placa,valorKm,valorLivre, disponivel) values ('$marca','$categoriaveiculo','$modelo','$cor','$ano','$opcionais','$portas','$placa','$valorKm','$valorLivre','$disponibilidade')")
                     or die('<script type="text/javascript">alert("Não é possível inserir o veículo!")</script>');
 
             print('<script type="text/javascript">alert("Veículo inserido com sucesso: $placa")</script>');
         }
         ?>
-        <p><a href="inserirVeiculo.php">Voltar</a></p>
-        <p><a href="../views/listaVeicDisp.php">Mostrar</a></p>
     </body>
 </html>

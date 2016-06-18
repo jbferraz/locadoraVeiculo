@@ -63,9 +63,9 @@
                     <div id="quatro"> 
                          
 
-                        <script type="text/javascript">
-                       
-                            
+                        
+                        
+<script type="text/javascript">          
 jQuery(function($) {
     $.mask.definitions['~']='[+-]';
     //Inicio Mascara Telefone

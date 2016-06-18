@@ -12,18 +12,18 @@
                     }
                 }
             </script>
-            <title>Veículos Disponiveis</title>
+            <title>Clientes</title>
             <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
     </head>
     <body>
         <ul>
-           <li><a class="active" href="listaVeicDisp.php">Veículos disponíveis</a></li>
+           <li><a class="active" href="listaVeicDisp.php">Veículos Disponíveis</a></li>
 
            <div class="dropdown">
                <li><a class="dropbtn">Cliente</a>
                    <div class="dropdown-content">
                        <a href="../models/insereCliente.php">Inserir Cliente</a>
-                       <a href="../views/listaCliente.php">Listar Clientes</a>
+                       <a href="listaClientes.php">Listar Clientes</a>
                    </div>
                </li>
            </div>
@@ -56,7 +56,7 @@
         <center>
             <table align=‘center'>
                 <center>
-                    <h1>Veículos Disponíveis</h1>
+                    <h1>Clientes</h1>
                 </center>
                 <tr><td align='center'>
                         <div id="quatro"> 
@@ -96,12 +96,11 @@
                                     print("<td>$endereco</td>");
                                     print("<td>$email</td>");
                                     print("<td><a href='../models/deletaCliente.php?cod=$Codigo'>Deletar</a></td>"); //Refatorar Deletar
-                                    print("<td><a href='../models/alteraCliente.php?cod=$Codigo'>Alterar</a></td></tr>"); //Refatorar Alterar
+                                    echo("<td><a href='../models/alteraCliente.php?cod=$Codigo'>Alterar</a></td></tr>");
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../models/insereVeiculo.php" class="button_voltar" >Inserir</a></p>
-                                <p><a href="../index.php" class="button_voltar" >Voltar</a></p>
+                                
                             </form>
                         </div>
                     </td></tr>

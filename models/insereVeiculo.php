@@ -79,19 +79,23 @@
                                 ?>
                             </select>
                             <label for="fname">Modelo</label>
-                            <input type="text" name="modelo">
+                            <input type="text" name="modelo"placeholder="Fiesta" required>
                             <label for="lname">Cor</label>
-                            <input type="text" name="cor">
+                            <input type="text" name="cor"placeholder="Azul" required>
                             <label for="lname">Ano</label>
-                            <input type="text" name="ano" placeholder="aaaa">
+                            <input type="text" name="ano" placeholder="AAAA" required>
                             <label for="lname">Portas</label>
-                            <input type="text" name="portas">
+                            <input type="text" name="portas"placeholder="Ex: 4" required>
                             <label for="lname">Opcionais</label>
-                            <input type="text" name="opcionais">
+                            <input type="text" name="opcionais"placeholder="Ex: Completo" required>
+                            <label for="lname">Valor KM</label>
+                            <input type="text" name="valorKm"placeholder="100,00" required>
+                            <label for="lname">Valor Diaria</label>
+                            <input type="text" name="valorLivre"placeholder="100,00" required>
                             <label for="lname">Placa</label>
-                            <input type="text" name="placa">
+                            <input type="text" name="placa"placeholder="AAA-1234" required>
                             <label for="disponibilidade">Disponibilidade</label>
-                            <select id="disponibilidade" name="disponibilidade">
+                            <select id="disponibilidade" name="disponibilidade"required>
                                 <option value= '0'>Não</option>
                                 <option value='1'>Sim</option>
                             </select>

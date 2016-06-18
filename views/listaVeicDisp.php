@@ -73,6 +73,8 @@
                                 print("<td><b>Cor</td>");
                                 print("<td><b>Portas</td>");
                                 print("<td><b>Opcionais</td>");
+                                print("<td><b>Valor KM</td>");
+                                print("<td><b>Valor Diária</td>");
                                 print("<td><b>Deletar</td><td><b>Alterar</td></tr>");
                                 while ($linha = mysql_fetch_array($resultado)) {
                                     $Codigo = $linha["idVeiculo"];
@@ -82,6 +84,8 @@
                                     $Cor = $linha["cor"];
                                     $Portas = $linha["portas"];
                                     $Opcionais = $linha["opcionais"];
+                                    $valorKm = $linha["valorKm"];
+                                    $valorLivre = $linha["valorLivre"];
                                     print("<tr><td align='center'>$Codigo</td>");
                                     print("<td>$Marca</td>");
                                     print("<td>$Modelo</td>");
@@ -89,13 +93,13 @@
                                     print("<td>$Cor</td>");
                                     print("<td>$Portas</td>");
                                     print("<td>$Opcionais</td>");
+                                    print("<td>$valorKm</td>");
+                                    print("<td>$valorLivre</td>");
                                     print("<td><a href='../models/deletaVeiculo.php?cod=$Codigo'>Deletar</a></td>"); //Refatorar Deletar
                                     print("<td><a href='../models/alteraVeiculo.php?cod=$Codigo'>Alterar</a></td></tr>"); //Refatorar Alterar
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../models/insereVeiculo.php" class="button_voltar" >Inserir</a></p>
-                                <p><a href="../index.php" class="button_voltar" >Voltar</a></p>
                             </form>
                         </div>
                     </td></tr>
