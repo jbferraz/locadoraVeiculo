@@ -60,8 +60,8 @@
                                 $categoriaveiculo = $linha["descCatVeiculo"];
                                 $cor = $linha["cor"];
                                 $ano = $linha["ano"];
-                                $valorKm = $linha["valorKm"]
-                                $valorLivre = $linha["valorLivre"]
+                                $valorKm = $linha["valorKm"];
+                                $valorLivre = $linha["valorLivre"];
                                 $placa = $linha["placa"];
                                 $idMarca = $linha["idMarca"];
                                 $idCatVeiculo = $linha["idCatVeiculo"];
