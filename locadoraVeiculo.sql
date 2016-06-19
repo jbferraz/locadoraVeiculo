@@ -23,7 +23,7 @@ CREATE TABLE Locacao (
   Veiculo_idVeiculo INTEGER UNSIGNED NOT NULL,
   dataLocacao TIMESTAMP NOT NULL,
   dataRetirada DATE NOT NULL,
-  dataDevolucao DATE NOT NULL,
+  dataDevolucao DATE NULL,
   kmRetirada INTEGER UNSIGNED NULL,
   kmDevolucao INTEGER UNSIGNED NULL,
   kmLivre BOOLean NULL,

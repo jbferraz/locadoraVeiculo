@@ -59,6 +59,16 @@ session_start();
                    </div>
                </li>
            </div>
+           <div class="dropdown">
+               <li><a class="dropbtn">Locação</a>
+                   <div class="dropdown-content">
+                       <a href="../locadoraVeiculo/models/insereLocacao.php">Inserir Locação</a>
+                       <a href="../locadoraVeiculo/models/devolveVeicLocado.php">Devolve Veículo</a>
+                       <a href="../locadoraVeiculo/views/listaLocAbertas.php">Locações Aberta</a>
+                       <a href="../locadoraVeiculo/views/listaLocacoes.php">Listar Locações</a>
+                   </div>
+               </li>
+           </div>
        </ul>
         
         <div id="corpo">

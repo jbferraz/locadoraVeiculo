@@ -12,12 +12,12 @@
                     }
                 }
             </script>
-            <title>Categorias de Veículos</title>
+            <title>Veículos Locados</title>
             <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
     </head>
     <body>
-        <ul>
-           <li><a class="active" href="../views/listaVeicDisp.php">Veículos disponíveis</a></li>
+        <ul><!--Inicio Menu-->
+           <li><a class="active" href="listaVeicDisp.php">Veículos disponíveis</a></li>
 
            <div class="dropdown">
                <li><a class="dropbtn">Cliente</a>
@@ -62,11 +62,11 @@
                    </div>
                </li>
            </div>
-       </ul>
+       </ul><!--Fim Menu-->
         <center>
             <table align=‘center'>
                 <center>
-                    <h1>Categorias de Veículos</h1>
+                    <h1>Veículos Locados</h1>
                 </center>
                 <tr><td align='center'>
                         <div id="quatro"> 
@@ -74,23 +74,60 @@
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $resultado = mysql_query("Select * from categoriaveiculo order by descCatVeiculo") or die("Não é possível consultar categoria de veículos.");
+                                $resultado = mysql_query("Select * from Locacao, Veiculo, Cliente where Cliente_idCliente=idCliente and Veiculo_idVeiculo=idVeiculo order by dataLocacao") or die("Não é possível consultar veículos locados.");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
-                                print("<td><b>Descrição Categoria</td>");
-                                print("<td><b>Deletar</td><td><b>Alterar</td></tr>");
+                                print("<td><b>Cliente</td>");
+                                print("<td><b>Veículo</td>");
+                                print("<td><b>Data Locação</td>");
+                                print("<td><b>Data Retirada</td>");
+                                print("<td><b>Data Devolução</td>");
+                                print("<td><b>Km Retirada</td>");
+                                print("<td><b>Km Devolução</td>");
+                                print("<td><b>Km Decorrida</td>");
+                                print("<td><b>Km Livre</td>");
+                                print("<td><b>Valor</td>");
+                                print("<td><b>Devolução</td><td><b>Alterar</td></tr>");
                                 while ($linha = mysql_fetch_array($resultado)) {
-                                    $Codigo = $linha["idCatVeiculo"];
-                                    $descCatVeiculo = $linha["descCatVeiculo"];
+                                    $Codigo = $linha["idLocacao"];
+                                    $Cliente = $linha["nomeCliente"];
+                                    $Modelo = $linha["modelo"];
+                                    $DtLocacao = $linha["dataLocacao"];
+                                    $DtRetirada = $linha["dataRetirada"];
+                                    $DtDevolucao = $linha["dataDevolucao"];
+                                    $KmRetirada = $linha["kmRetirada"];
+                                    $KmDevolucao = $linha["kmDevolucao"];
+                                    $KmDecorrida = $KmDevolucao-$KmRetirada;
+                                    if ($KmDecorrida<0){
+                                        $KmDecorrida=0;
+                                    }
+                                    if ($linha["kmLivre"] == 1){
+                                        $KmLivre="Sim";
+                                    }Else{
+                                        $KmLivre="Não";
+                                    }
+                                    if ($linha["kmLivre"] == 1){
+                                        $valor=$linha["valorLivre"];
+                                    }Else{
+                                        $valor=$linha["valorKm"]*$KmDecorrida;
+                                    }
                                     print("<tr><td align='center'>$Codigo</td>");
-                                    print("<td>$descCatVeiculo</td>");
-                                    print("<td><a href='../models/deletarCatVeiculo.php?cod=$Codigo'>Deletar</a></td>"); //Refatorar Deletar
-                                    print("<td><a href='../models/alteraCatVeiculo.php?cod=$Codigo'>Alterar</a></td></tr>"); //Refatorar Alterar
+                                    print("<td>$Cliente</td>");
+                                    print("<td>$Modelo</td>");
+                                    print("<td>$DtLocacao</td>");
+                                    print("<td>$DtRetirada</td>");
+                                    print("<td>$DtDevolucao</td>");
+                                    print("<td>$KmRetirada</td>");
+                                    print("<td>$KmDevolucao</td>");
+                                    print("<td>$KmDecorrida</td>");
+                                    print("<td>$KmLivre</td>");
+                                    print("<td>$valor</td>");
+                                    print("<td><a href='../models/devolucaoVeiculo.php?cod=$Codigo'>Devolução</a></td>"); 
+                                    print("<td><a href='../models/alteraLocVeiculo.php?cod=$Codigo'>Alterar</a></td></tr>"); 
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../models/insereCatVeiculo.php" class="button_voltar" >Inserir</a></p>
-                                <p><a href="../index.php" class="button_voltar" >Voltar</a></p>
+                                <p><a href="../index.php" class="button_voltar">Voltar</a></p>
                             </form>
                         </div>
                     </td></tr>
