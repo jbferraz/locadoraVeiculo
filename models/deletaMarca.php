@@ -22,7 +22,7 @@
                <li><a class="dropbtn">Veículo</a>
                    <div class="dropdown-content">
                        <a href="../models/insereVeiculo.php">Inserir Veículo</a>
-                       <a href="../views/listaVeicDisp.php">Listar Veículos</a>
+                       <a href="../views/listaVeiculos.php">Listar Veículos</a>
 
                    </div>
                </li>
@@ -67,12 +67,13 @@
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
                                 $result = mysql_query("Select * from marca where idMarca ='$cod'") or die("Não é possível retornar dados do funcionário!");
                                 $linha = mysql_fetch_array($result);
+                                $idMarca = $linha['idMarca'];
                                 $marca = $linha['nomeMarca'];
-                                print("<h3>Deletando a marca:</h3><p>");
+                                print("<h3>Deletando:</h3><p>");
                                 print("<b>Marca:</b> $marca<br>");
                                 ?>
-                                <form action="confirmaDelVeic.php" method="get">
-                                    <input type="hidden" name="cod_del" value="<?php print($marca) ?>">
+                                <form action="confirmaDelMarca.php" method="get">
+                                    <input type="hidden" name="cod_del" value="<?php print($idMarca) ?>">
                                     <br><input type="submit" value="Deletar Dados">
                                 </form>
                             <p>

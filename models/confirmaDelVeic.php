@@ -1,11 +1,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
-    <meta charset="UTF-8" http-equiv="Content-Type" content="2 ;../views/listaVeicDisp.php">
-        <style type="text/css">
-            @import '../config/style.css';
-        </style>
+    <meta charset="UTF-8" http-equiv="Content-Type">
         <head>
-
-            <meta http-equiv="refresh" content="0 ;../views/listaVeicDisp.php">
+            <style type="text/css">
+                @import '../config/style.css';
+            </style>
+            <title>Veículo DELETADO</title>
+            <meta http-equiv="refresh" content="0;../views/listaVeicDisp.php"/>
         </head>
         <body>
             <center>

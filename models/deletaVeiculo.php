@@ -24,7 +24,7 @@
                <li><a class="dropbtn">Veículo</a>
                    <div class="dropdown-content">
                        <a href="../models/insereVeiculo.php">Inserir Veículo</a>
-                       <a href="../views/listaVeicDisp.php">Listar Veículos</a>
+                       <a href="../views/listaVeiculos.php">Listar Veículos</a>
 
                    </div>
                </li>
