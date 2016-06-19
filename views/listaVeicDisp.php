@@ -55,10 +55,9 @@
            <div class="dropdown">
                <li><a class="dropbtn">Locação</a>
                    <div class="dropdown-content">
-                       <a href="../models/insereLocacao.php">Inserir Locação</a>
-                       <a href="../models/devolveVeicLocado.php">Devolve Veículo</a>
-                       <a href="../views/listaLocAbertas.php">Locações Aberta</a>
-                       <a href="../views/listaLocacoes.php">Listar Locações</a>
+                       <a href="listaVeicDisp.php">Locar Veículo</a>
+                       <a href="../views/listaLocAbertas.php">Locações Abertas</a>
+                       <a href="../views/listaLocacoes.php">Histórico</a>
                    </div>
                </li>
            </div>
@@ -85,7 +84,7 @@
                                 print("<td><b>Opcionais</td>");
                                 print("<td><b>Valor KM</td>");
                                 print("<td><b>Valor Diária</td>");
-                                print("<td><b>Deletar</td><td><b>Alterar</td></tr>");
+                                print("<td><b>Locar</td></tr>");
                                 while ($linha = mysql_fetch_array($resultado)) {
                                     $Codigo = $linha["idVeiculo"];
                                     $Marca = $linha["nomeMarca"];
@@ -105,8 +104,7 @@
                                     print("<td>$Opcionais</td>");
                                     print("<td>$valorKm</td>");
                                     print("<td>$valorLivre</td>");
-                                    print("<td><a href='../models/deletaVeiculo.php?cod=$Codigo'>Deletar</a></td>"); //Refatorar Deletar
-                                    print("<td><a href='../models/alteraVeiculo.php?cod=$Codigo'>Alterar</a></td></tr>"); //Refatorar Alterar
+                                    print("<td><a href='../models/locarVeiculo.php?cod=$Codigo'>Locar</a></td>"); //Refatorar Deletar
                                 }
                                 print("</table></center>");
                                 ?>

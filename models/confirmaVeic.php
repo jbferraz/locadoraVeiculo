@@ -3,7 +3,7 @@
         <style type="text/css">
             @import '../config/style.css';
         </style>
-        <meta http-equiv="refresh" content="2 ;../views/listaVeicDisp.php">
+        <meta http-equiv="refresh" content="0 ;../views/listaVeicDisp.php">
         <title>Confirma Veículos</title>
         <head>
             <center>

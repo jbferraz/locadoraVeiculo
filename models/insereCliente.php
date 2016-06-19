@@ -55,10 +55,9 @@
             <div class="dropdown">
                <li><a class="dropbtn">Locação</a>
                    <div class="dropdown-content">
-                       <a href="../models/insereLocacao.php">Inserir Locação</a>
-                       <a href="../models/devolveVeicLocado.php">Devolve Veículo</a>
-                       <a href="../views/listaLocAbertas.php">Locações Aberta</a>
-                       <a href="../views/listaLocacoes.php">Listar Locações</a>
+                       <a href="../views/listaVeicDisp.php">Locar Veículo</a>
+                       <a href="../views/listaLocAbertas.php">Locações Abertas</a>
+                       <a href="../views/listaLocacoes.php">Histórico</a>
                    </div>
                </li>
            </div>

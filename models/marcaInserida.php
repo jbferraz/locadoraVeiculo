@@ -5,7 +5,7 @@
                 @import '../config/style.css';
             </style>
             <title>Marca Cadastrada</title>
-            <meta http-equiv="refresh" content="11111111;../views/listaVeicDisp.php"/>
+            <meta http-equiv="refresh" content="0;../views/listaVeicDisp.php"/>
     </head>
     <body>
         <?php

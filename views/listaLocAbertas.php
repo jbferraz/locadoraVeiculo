@@ -12,11 +12,11 @@
                     }
                 }
             </script>
-            <title>Veículos</title>
+            <title>Veículos Locados</title>
             <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
     </head>
     <body>
-        <ul>
+        <ul><!--Inicio Menu-->
            <li><a class="active" href="listaVeicDisp.php">Veículos disponíveis</a></li>
 
            <div class="dropdown">
@@ -31,7 +31,7 @@
                <li><a class="dropbtn">Veículo</a>
                    <div class="dropdown-content">
                        <a href="../models/insereVeiculo.php">Inserir Veículo</a>
-                       <a href="listaVeiculos.php">Listar Veículos</a>
+                       <a href="../views/listaVeiculos.php">Listar Veículos</a>
 
                    </div>
                </li>
@@ -56,16 +56,16 @@
                <li><a class="dropbtn">Locação</a>
                    <div class="dropdown-content">
                        <a href="../views/listaVeicDisp.php">Locar Veículo</a>
-                       <a href="../views/listaLocAbertas.php">Locações Abertas</a>
+                       <a href="listaLocAbertas.php">Locações Abertas</a>
                        <a href="../views/listaLocacoes.php">Histórico</a>
                    </div>
                </li>
            </div>
-       </ul>
+       </ul><!--Fim Menu-->
         <center>
             <table align=‘center'>
                 <center>
-                    <h1>Veículos</h1>
+                    <h1>Veículos Locados</h1>
                 </center>
                 <tr><td align='center'>
                         <div id="quatro"> 
@@ -73,42 +73,41 @@
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $resultado = mysql_query("Select * from marca,veiculo,categoriaveiculo where veiculo.marca_idMarca=marca.idMarca AND veiculo.categoriaVeiculo_idCatVeiculo = categoriaveiculo.idCatVeiculo") or die("Não é possível consultar veículos disponiveis.");
+                                $resultado = mysql_query("Select * from Locacao, Veiculo, Cliente where disponivel=0 and Cliente_idCliente=idCliente and Veiculo_idVeiculo=idVeiculo order by dataLocacao") or die("Não é possível consultar veículos locados.");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
-                                print("<td><b>Marca</td>");
-                                print("<td><b>Categoria</td>");
-                                print("<td><b>Modelo</td>");
-                                print("<td><b>Ano</td>");
-                                print("<td><b>Cor</td>");
-                                print("<td><b>Portas</td>");
-                                print("<td><b>Opcionais</td>");
-                                print("<td><b>Valor KM</td>");
-                                print("<td><b>Valor Diária</td>");
-                                print("<td><b>Deletar</td><td><b>Alterar</td></tr>");
+                                print("<td><b>Cliente</td>");
+                                print("<td><b>Veículo</td>");
+                                print("<td><b>Data Locação</td>");
+                                print("<td><b>Data Retirada</td>");
+                                print("<td><b>Data Devolução</td>");
+                                print("<td><b>Km Retirada</td>");
+                                print("<td><b>Km Livre</td>");
+                                print("<td><b>Devolução</td></tr>");
                                 while ($linha = mysql_fetch_array($resultado)) {
-                                    $Codigo = $linha["idVeiculo"];
-                                    $Marca = $linha["nomeMarca"];
-                                    $descCatVeiculo = $linha["descCatVeiculo"];
+                                    $Codigo = $linha["idLocacao"];
+                                    $Cliente = $linha["nomeCliente"];
                                     $Modelo = $linha["modelo"];
-                                    $Ano = $linha["ano"];
-                                    $Cor = $linha["cor"];
-                                    $Portas = $linha["portas"];
-                                    $Opcionais = $linha["opcionais"];
-                                    $valorKm = $linha["valorKm"];
-                                    $valorLivre = $linha["valorLivre"];
+                                    $DtLocacao = $linha["dataLocacao"];
+                                    $DtRetirada = $linha["dataRetirada"];
+                                    $DtDevolucao = $linha["dataDevolucao"];
+                                    $KmRetirada = $linha["kmRetirada"];
+                                    
+                                    if ($linha["kmLivre"] == 1){
+                                        $KmLivre="Sim";
+                                    }Else{
+                                        $KmLivre="Não";
+                                    }
+                                    
                                     print("<tr><td align='center'>$Codigo</td>");
-                                    print("<td>$Marca</td>");
-                                    print("<td>$descCatVeiculo</td>");
+                                    print("<td>$Cliente</td>");
                                     print("<td>$Modelo</td>");
-                                    print("<td>$Ano</td>");
-                                    print("<td>$Cor</td>");
-                                    print("<td>$Portas</td>");
-                                    print("<td>$Opcionais</td>");
-                                    print("<td>$valorKm</td>");
-                                    print("<td>$valorLivre</td>");
-                                    print("<td><a href='../models/deletaVeiculo.php?cod=$Codigo'>Deletar</a></td>"); //Refatorar Deletar
-                                    print("<td><a href='../models/alteraVeiculo.php?cod=$Codigo'>Alterar</a></td></tr>"); //Refatorar Alterar
+                                    print("<td>$DtLocacao</td>");
+                                    print("<td>$DtRetirada</td>");
+                                    print("<td>$DtDevolucao</td>");
+                                    print("<td>$KmRetirada</td>");
+                                    print("<td>$KmLivre</td>");
+                                    print("<td><a href='../models/devolucaoVeiculo.php?cod=$Codigo'>Devolução</a></td>"); 
                                 }
                                 print("</table></center>");
                                 ?>
