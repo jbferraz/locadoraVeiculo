@@ -30,7 +30,7 @@ session_start();
                <li><a class="dropbtn">Cliente</a>
                    <div class="dropdown-content">
                        <a href="../locadoraVeiculo/models/insereCliente.php">Inserir Cliente</a>
-                       <a href="../locadoraVeiculo/views/listaCliente.php">Listar Clientes</a>
+                       <a href="../locadoraVeiculo/views/listaClientes.php">Listar Clientes</a>
                    </div>
                </li>
            </div>

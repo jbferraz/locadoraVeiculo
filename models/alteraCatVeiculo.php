@@ -70,7 +70,7 @@
                         <input type="text" name="descCatVeiculo_alter" value="<?php print ($descCatVeiculo) ?>">
                         <p><input type="submit" value="Alterar Dados">
                     </form>
-                    <p><a href="mostraf.php">Cancelar e voltar</a>
+                    <p><a href="..\views\listaCatVeicDisp.php" class="button_voltar">Cancelar e voltar</a>
                         </form>
                 </div>
             </td></tr>

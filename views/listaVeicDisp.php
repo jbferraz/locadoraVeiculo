@@ -100,6 +100,7 @@
                                 }
                                 print("</table></center>");
                                 ?>
+                                <p><a href="../index.php" class="button_voltar">Voltar</a></p>
                             </form>
                         </div>
                     </td></tr>

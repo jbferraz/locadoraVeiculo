@@ -4,10 +4,10 @@
             @import '../config/style.css';
         </style>
         <head>
-            
+            <title>Deleta Categorias</title>
         </head>
         <body>
-        <ul>
+        <ul><!--Inicio do Menu-->
            <li><a class="active" href="../views/listaVeicDisp.php">Veículos disponíveis</a></li>
 
            <div class="dropdown">
@@ -43,10 +43,10 @@
                    </div>
                </li>
            </div>
-       </ul>
+       </ul><!--fim do Menu-->
             <center>
                 <center>
-                <h1>Deleta Veículo</h1>
+                <h1>Deleta Categoria Veículo</h1>
             </center>
                 <table align=‘center'>
                     <tr><td align='center'>
@@ -55,29 +55,21 @@
                                 $cod = $_GET['cod'];
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $result = mysql_query("Select * from cliente where idCliente ='$cod'") or die("Não é possível retornar dados do funcionário!");
+                                $result = mysql_query("Select * from categoriaveiculo where idCatVeiculo ='$cod'") or die("Não é possível retornar dados de categoria!");
                                 $linha = mysql_fetch_array($result);
                                 
-                                $nomeCliente = $linha['nomeCliente'];
-                                $cpf = $linha['CPF'];
-                                $telefone = $linha['telefone'];
-                                $celular = $linha['celular'];
-                                $endereco = $linha['endereco'];
-                                $email = $linha['email'];
-                                $dataNascimento = $linha['dataNascimento'];
-                                $sexo = $linha['sexo'];
+                                $idCatVeic = $linha['idCatVeiculo'];
+                                $nomeCatVeic = $linha['descCatVeiculo'];
 
-
-                                print("<h3>Deletando o Cliente:</h3><p>");
-                                print("<b>Nome:</b>  $nomeCliente<br>");
-                                print("<b> Cpf:</b> $cpf<br>");
+                                print("<h3>Deletando Categoria:</h3><p>");
+                                print("<b>Nome:</b>  $nomeCatVeic<br>");
                                 ?>
-                                <form action="confirmaDelCliente.php" method="get">
-                                    <input type="hidden" name="cod_del" value="<?php print($cpf) ?>">
+                                <form action="confirmaDelCatVeic.php" method="get">
+                                    <input type="hidden" name="cod_del" value="<?php print($idCatVeic) ?>">
                                     <br><input type="submit" value="Deletar Dados">
                                 </form>
                             <p>
-                        <a href="../views/listaClientes.php" class="button_voltar" >Cancelar e voltar</a>
+                                <a href="../views/listaCatVeicDisp.php" class="button_voltar" >Cancelar e voltar</a>
                         </p>
                         </div>
                  </td></tr>

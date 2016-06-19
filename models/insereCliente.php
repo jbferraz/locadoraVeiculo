@@ -124,7 +124,7 @@ jQuery(function($) {
 
                             <input type="submit" value="Inserir Cliente" >
                             <p>
-                            <a href="../views/listaCliente.php" class="button_voltar" >Voltar</a>
+                            <a href="../views/listaClientes.php" class="button_voltar" >Cancelar e voltar</a>
                             </p>
 
                         </form>

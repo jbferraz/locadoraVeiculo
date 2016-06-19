@@ -5,7 +5,7 @@
         </style>
         <head>
             <center>
-                <h1>Deleta Veículo</h1>
+                
             </center>
         </head>
         <body>
@@ -47,6 +47,7 @@
            </div>
        </ul>
             <center>
+                <h1>Deleta Veículo</h1>
                 <table align=‘center'>
                     <tr><td align='center'>
                             <div id="quatro"> 
@@ -79,7 +80,7 @@
                                     <br><input type="submit" value="Deletar Dados">
                                 </form>
                             <p>
-                        <a href="../views/listaVeicDisp.php" class="button_voltar" >Voltar</a>
+                        <a href="../views/listaVeicDisp.php" class="button_voltar" >Cancelar e voltar</a>
                         </p>
                         </div>
                  </td></tr>
