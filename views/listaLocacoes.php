@@ -85,8 +85,7 @@
                                 print("<td><b>Km Devolução</td>");
                                 print("<td><b>Km Decorrida</td>");
                                 print("<td><b>Km Livre</td>");
-                                print("<td><b>Valor</td>");
-                                print("<td><b>Devolução</td><td><b>Alterar</td></tr>");
+                                print("<td><b>Valor</td></tr>");
                                 while ($linha = mysql_fetch_array($resultado)) {
                                     $Codigo = $linha["idLocacao"];
                                     $Cliente = $linha["nomeCliente"];
@@ -121,8 +120,7 @@
                                     print("<td>$KmDecorrida</td>");
                                     print("<td>$KmLivre</td>");
                                     print("<td>$valor</td>");
-                                    print("<td><a href='../models/devolucaoVeiculo.php?cod=$Codigo'>Devolução</a></td>"); 
-                                    print("<td><a href='../models/alteraLocVeiculo.php?cod=$Codigo'>Alterar</a></td></tr>"); 
+                                   
                                 }
                                 print("</table></center>");
                                 ?>

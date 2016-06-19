@@ -73,10 +73,11 @@
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $resultado = mysql_query("Select * from veiculo, Marca where disponivel=1 and marca_idMarca=idMarca order by modelo") or die("Não é possível consultar veículos disponiveis.");
+                                $resultado = mysql_query("Select * from marca,veiculo,categoriaveiculo where disponivel='1' and veiculo.marca_idMarca=marca.idMarca AND veiculo.categoriaVeiculo_idCatVeiculo = categoriaveiculo.idCatVeiculo") or die("Não é possível consultar veículos disponiveis.");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
                                 print("<td><b>Marca</td>");
+                                print("<td><b>Categoria</td>");
                                 print("<td><b>Modelo</td>");
                                 print("<td><b>Ano</td>");
                                 print("<td><b>Cor</td>");
@@ -88,6 +89,7 @@
                                 while ($linha = mysql_fetch_array($resultado)) {
                                     $Codigo = $linha["idVeiculo"];
                                     $Marca = $linha["nomeMarca"];
+                                    $descCatVeiculo = $linha["descCatVeiculo"];
                                     $Modelo = $linha["modelo"];
                                     $Ano = $linha["ano"];
                                     $Cor = $linha["cor"];
@@ -97,6 +99,7 @@
                                     $valorLivre = $linha["valorLivre"];
                                     print("<tr><td align='center'>$Codigo</td>");
                                     print("<td>$Marca</td>");
+                                    print("<td>$descCatVeiculo</td>");
                                     print("<td>$Modelo</td>");
                                     print("<td>$Ano</td>");
                                     print("<td>$Cor</td>");

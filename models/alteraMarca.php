@@ -56,7 +56,7 @@
 <center>
     <table align=‘center'>
         <center>
-            <h1>Alterar Categoria</h1>
+            <h1>Alterar Marca</h1>
         </center>
         <tr><td align='center'>
                 <div id="quatro">
@@ -66,20 +66,20 @@
                         $cod = $_GET['cod'];
                         require("../controller/conecta.inc");
                         conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                        $resultado = mysql_query("Select * from categoriaveiculo where idCatVeiculo ='$cod'") or die("Não é possível retornar dados do funcionário!");
+                        $resultado = mysql_query("Select * from marca where idMarca ='$cod'") or die("Não é possível retornar dados do funcionário!");
                         $linha = mysql_fetch_array($resultado);
-                        $Codigo = $linha["idCatVeiculo"];
-                        $descCatVeiculo = $linha["descCatVeiculo"];
+                        $Codigo = $linha["idMarca"];
+                        $nomeMarca = $linha["nomeMarca"];
                         print("<h3>Alterar dados de categoria:</h3><p>");
                     ?> 
-                    <form action="confirmaCatVeic.php"method="post">
+                    <form action="confirmaMarca.php"method="get">
 
                         <input type="hidden" name="cod_alter" value="<?php print($Codigo)?>">
                         <label for="fname">Categoria Veículo</label>
-                        <input type="text" name="descCatVeiculo_alter" value="<?php print ($descCatVeiculo) ?>">
+                        <input type="text" name="nomeMarca_alter" value="<?php print ($nomeMarca) ?>">
                         <p><input type="submit" value="Alterar Dados">
                     </form>
-                    <p><a href="..\views\listaCatVeicDisp.php" class="button_voltar">Cancelar e voltar</a>
+                    <p><a href="..\locadoraVeiculos\index.php" class="button_voltar">Cancelar e voltar</a>
                         </form>
                 </div>
             </td></tr>

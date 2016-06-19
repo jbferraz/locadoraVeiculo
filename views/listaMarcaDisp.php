@@ -12,7 +12,7 @@
                     }
                 }
             </script>
-            <title>Categorias de Veículos</title>
+            <title>Marcas de Veículos</title>
             <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
     </head>
     <body>
@@ -65,7 +65,7 @@
         <center>
             <table align=‘center'>
                 <center>
-                    <h1>Categorias de Veículos</h1>
+                    <h1>Marcas de Veículos</h1>
                 </center>
                 <tr><td align='center'>
                         <div id="quatro"> 

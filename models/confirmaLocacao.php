@@ -5,12 +5,12 @@
                 @import '../config/style.css';
             </style>
             <title>Locação concluída</title>
-            <meta http-equiv="refresh" content="0;../views/listaVeicDisp.php"/>
+            <meta http-equiv="refresh" content="111111111110;../views/listaVeicDisp.php"/>
     </head>
     <body>
         <?php
         $Codigo = $_GET['idVeiculo'];
-        
+        $cliente = $_GET['idCliente'];
         $dataRetirada = $_GET['dataRetirada'];
         $dataDevolucao = $_GET['dataDevolucao'];
         $kmLivre = $_GET['kmLivre'];
@@ -23,7 +23,7 @@
                     or die('<script type="text/javascript">alert("Não é possível inserir o veículo!")</script>');
                 mysql_query("UPDATE veiculo SET disponivel='0'where idVeiculo='$Codigo'") or die("Não é possível alterar dados de categoria!");
 
-            print('<script type="text/javascript">alert("Veículo inserido com sucesso: $placa")</script>');
+            print('<script type="text/javascript">alert("Veículo locado com sucesso!")</script>');
         ?>
     </body>
 </html>
