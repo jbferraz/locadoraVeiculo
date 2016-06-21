@@ -19,7 +19,7 @@
             require("../controller/conecta.inc");
             conecta_bd() or die("Não é possível conectar-se ao servidor.");
 
-                mysql_query("INSERT INTO locacao(Cliente_idCliente, Veiculo_idVeiculo, dataRetirada, dataDevolucao, kmRetirada, kmLivre) VALUES ('$cliente','$Codigo','$dataRetirada','$dataLocacao','$KmRetirada','$kmLivre')")
+                mysql_query("INSERT INTO locacao(Cliente_idCliente, Veiculo_idVeiculo, dataRetirada, dataLocacao, kmRetirada, kmLivre) VALUES ('$cliente','$Codigo','$dataRetirada','$dataLocacao','$KmRetirada','$kmLivre')")
                     or die('<script type="text/javascript">alert("Não é possível inserir o veículo!")</script>');
                 mysql_query("UPDATE veiculo SET disponivel='0'where idVeiculo='$Codigo'") or die("Não é possível alterar dados de categoria!");
 

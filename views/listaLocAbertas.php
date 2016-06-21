@@ -73,7 +73,7 @@
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $resultado = mysql_query("Select * from Locacao, Veiculo, Cliente where disponivel=0 and Cliente_idCliente=idCliente and Veiculo_idVeiculo=idVeiculo order by dataLocacao") or die("Não é possível consultar veículos locados.");
+                                $resultado = mysql_query("Select * from Locacao, Veiculo, Cliente where disponivel=0 and Cliente_idCliente=idCliente and Veiculo_idVeiculo=idVeiculo and dataDevolucao is null order by dataLocacao") or die("Não é possível consultar veículos locados.");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
                                 print("<td><b>Cliente</td>");

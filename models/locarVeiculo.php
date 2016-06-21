@@ -74,6 +74,10 @@
                                 print("<b>Placa:</b> $placa<p>");
                                 print("<b>KM:</b> R$ $valorKm<p>");
                                 print("<b>Diária:</b> R$ $valorLivre<p>");
+                                $resultado2 = mysql_query("SELECT Veiculo_idVeiculo, Max(kmDevolucao) as kmDev from locacao WHERE Veiculo_idVeiculo='$Codigo'") or die("Não é possível consultar marca.");
+                                $linha2= mysql_fetch_array($resultado2);
+                                $KmDevolucao=$linha2["kmDev"];
+                                print("<b>Ultima Km:</b> $KmDevolucao<p>");
                             ?>
                             <form action="confirmaLocacao.php"method="get">
                                 <input type="hidden" name="idVeiculo" value="<?php print($Codigo)?>">
@@ -101,7 +105,7 @@
                                 
                                 </select>
                             <label for="lname">KM Retirada:</label>
-                            <input type="text" name="kmRetirada" required>
+                            <input type="text" name="kmRetirada"  required>
                                 
                                 <p><input type="submit" value="Concluir">
                             </form>
