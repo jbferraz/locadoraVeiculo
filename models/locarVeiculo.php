@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" http-equiv="Content-Type">
         <style type="text/css">
-           
            @import '../config/style.css';
          </style>
+         <title>Locar Veículo</title>
     </head>
     <body>
         <ul>
@@ -23,7 +23,6 @@
                     <div class="dropdown-content">
                         <a href="../models/insereVeiculo.php">Inserir Veículo</a>
                         <a href="../views/listaVeiculos.php">Listar Veículos</a>
-
                     </div>
                 </li>
             </div>
@@ -54,7 +53,7 @@
            </div>
         </ul>
          <center>
-            <h1>Alterar Veículo</h1>
+            <h1>Locar Veículo</h1>
             <table align=‘center'>
                 <tr><td align='center'>
                         <div id="quatro">
@@ -90,10 +89,10 @@
                                     }
                                 ?>
                             </select>
-                                <label for="lname">Retirada:</label>
+                                <label for="lname">Data Locação:</label>
+                            <input type="date" name="dataLocacao" required>
+                                <label for="lname">Data Retirada:</label>
                             <input type="date" name="dataRetirada" required>
-                                <label for="lname">Devolução:</label>
-                            <input type="date" name="dataDevolucao" required>
                                 <label for="lname">KM Livre:</label>
                                 <select id="kmLivre" name="kmLivre"required>
         
@@ -106,7 +105,7 @@
                                 
                                 <p><input type="submit" value="Concluir">
                             </form>
-                            <p><a href="mostraf.php">Cancelar e voltar</a>
+                            <p><a href="../views/listaVeicDisp.php" class="button_voltar">Cancelar e voltar</a>
                         </div>
                     </td></tr>
             </table>

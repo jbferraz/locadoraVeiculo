@@ -100,7 +100,7 @@
                                 
                                 <p><input type="submit" value="Concluir">
                             </form>
-                            <p><a href="mostraf.php">Cancelar e voltar</a>
+                            <p><a href="mostraf.php" class="button_voltar">Cancelar e voltar</a></p>
                         </div>
                     </td></tr>
             </table>

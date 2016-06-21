@@ -25,11 +25,9 @@
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
                                 print("Devoluçao realizada:<p>");
-                               
                                 mysql_query("UPDATE locacao SET kmDevolucao='$KmDevolucao',dataDevolucao='$dataDevolucao' where idLocacao='$cod'") or die("Não é possível alterar dados do veículo!");
                                  mysql_query("UPDATE veiculo SET disponivel='1'where idVeiculo='$idVeiculo'") or die("Não é possível alterar dados de categoria!");
                                 ?>
-
                             </div>
                         </td></tr>
                 </table>

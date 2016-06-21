@@ -65,7 +65,7 @@
                             <input type="text" name="descCatVeiculo">
                             <input type="submit" value="Inserir Veículo" >
                             <p>
-                            <a href="../views/listaCatVeicDisp.php" class="button_voltar" >Cancelar e voltar</a>
+                                <a href="../views/listaCatVeicDisp.php" class="button_voltar" >Cancelar e voltar</a>
                             </p>
                         </form>
                     </div>
