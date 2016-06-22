@@ -27,6 +27,7 @@ CREATE TABLE Locacao (
   kmRetirada INTEGER UNSIGNED NULL,
   kmDevolucao INTEGER UNSIGNED NULL,
   kmLivre BOOLean NULL,
+  status BOOLean NULL,
   PRIMARY KEY(idLocacao),
   INDEX Locacao_FKIndex1(Cliente_idCliente),
   INDEX Locacao_FKIndex2(Veiculo_idVeiculo)

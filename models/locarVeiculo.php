@@ -81,6 +81,7 @@
                             ?>
                             <form action="confirmaLocacao.php"method="get">
                                 <input type="hidden" name="idVeiculo" value="<?php print($Codigo)?>">
+                                <input type="hidden" name="kmRetirada" value="<?php print($KmDevolucao)?>">
                                 <label for="cliente">Cliente</label>
                                 <select name="idCliente">
                                 <?php
@@ -93,10 +94,11 @@
                                     }
                                 ?>
                             </select>
-                                <label for="lname">Data Locação:</label>
-                            <input type="date" name="dataLocacao" required>
+                               
                                 <label for="lname">Data Retirada:</label>
                             <input type="date" name="dataRetirada" required>
+                                 <label for="lname">Data Devolução:</label>
+                            <input type="date" name="dataDevolucao" required>
                                 <label for="lname">KM Livre:</label>
                                 <select id="kmLivre" name="kmLivre"required>
         
@@ -104,8 +106,7 @@
                                 <option value='0'>Não</option>
                                 
                                 </select>
-                            <label for="lname">KM Retirada:</label>
-                            <input type="text" name="kmRetirada"  required>
+                            
                                 
                                 <p><input type="submit" value="Concluir">
                             </form>
