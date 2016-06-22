@@ -73,7 +73,7 @@
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $resultado = mysql_query("Select * from categoriaveiculo order by descCatVeiculo") or die("Não é possível consultar categoria de veículos.");
+                                $resultado = mysql_query("Select * from categoriaveiculo where catAtivo=1 order by descCatVeiculo") or die("Não é possível consultar categoria de veículos.");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
                                 print("<td><b>Descrição Categoria</td>");
@@ -88,8 +88,7 @@
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../models/insereCatVeiculo.php" class="button_voltar" >Inserir</a></p>
-                                <p><a href="../index.php" class="button_voltar" >Voltar</a></p>
+                                
                             </form>
                         </div>
                     </td></tr>

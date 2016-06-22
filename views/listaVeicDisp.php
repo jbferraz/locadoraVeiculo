@@ -4,6 +4,7 @@
             <style type="text/css">
                 @import '../config/style.css';
             </style>
+            <meta http-equiv="refresh" content="10 ;../index.php">
             <script type="text/javascript">
 
                 window.onload = function () {
@@ -111,7 +112,7 @@
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../index.php" class="button_voltar">Voltar</a></p>
+                                
                             </form>
                         </div>
                     </td></tr>

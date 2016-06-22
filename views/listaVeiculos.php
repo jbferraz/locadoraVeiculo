@@ -73,7 +73,7 @@
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $resultado = mysql_query("Select * from marca,veiculo,categoriaveiculo where veiculo.marca_idMarca=marca.idMarca AND veiculo.categoriaVeiculo_idCatVeiculo = categoriaveiculo.idCatVeiculo") or die("Não é possível consultar veículos disponiveis.");
+                                $resultado = mysql_query("Select * from marca,veiculo,categoriaveiculo where veicAtivo=1 and veiculo.marca_idMarca=marca.idMarca AND veiculo.categoriaVeiculo_idCatVeiculo = categoriaveiculo.idCatVeiculo") or die("Não é possível consultar veículos disponiveis.");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
                                 print("<td><b>Marca</td>");
@@ -112,8 +112,7 @@
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../models/insereVeiculo.php" class="button_voltar" >Inserir</a></p>
-                                <p><a href="../index.php" class="button_voltar">Voltar</a></p>
+                                
                             </form>
                         </div>
                     </td></tr>

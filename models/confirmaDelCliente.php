@@ -16,7 +16,7 @@
                 $cod = $_GET['cod_del'];
                 require("../controller/conecta.inc");
                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                mysql_query("DELETE FROM `cliente` WHERE CPF ='$cod'") or die('<script type="text/javascript">alert("Veículo Deletado com sucesso: $placa")</script>');
+                mysql_query("UPDATE cliente SET `cliAtivo`=0 WHERE CPF ='$cod'") or die('<script type="text/javascript">alert("Veículo Deletado com sucesso: $placa")</script>');
                 print('<script type="text/javascript">alert("Cliente Deletado com sucesso!")</script>');
                 ?>
 

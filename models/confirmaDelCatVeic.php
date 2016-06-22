@@ -16,7 +16,7 @@
                 $cod = $_GET['cod_del'];
                 require("../controller/conecta.inc");
                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                mysql_query("DELETE FROM `categoriaveiculo` WHERE idCatVeiculo ='$cod'") or die('<script type="text/javascript">alert("Categoria Deletada com sucesso: $placa")</script>');
+                mysql_query("update categoriaveiculo set catAtivo=0 WHERE idCatVeiculo ='$cod'") or die('<script type="text/javascript">alert("Categoria Deletada com sucesso: $placa")</script>');
                 print('<script type="text/javascript">alert("Categoria Deletada com sucesso: $placa")</script>');
                 ?>
             </center>

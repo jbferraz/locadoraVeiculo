@@ -14,7 +14,7 @@
                 $cod = $_GET['cod_del'];
                 require("../controller/conecta.inc");
                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                mysql_query("DELETE FROM `marca` WHERE idMarca ='$cod'") or die('<script type="text/javascript">alert("Veículo Deletado com sucesso: $placa")</script>');
+                mysql_query("update marca set marcaAtiva = 0 WHERE idMarca ='$cod'") or die('<script type="text/javascript">alert("Veículo Deletado com sucesso: $placa")</script>');
                 print('<script type="text/javascript">alert("Marca deletada com sucesso!")</script>');
                 ?>
 

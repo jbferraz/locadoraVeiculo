@@ -1,6 +1,7 @@
 CREATE TABLE categoriaVeiculo (
   idCatVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   descCatVeiculo VARCHAR(20) NOT NULL,
+  catAtivo boolean,
   PRIMARY KEY(idCatVeiculo)
 );
 
@@ -14,6 +15,7 @@ CREATE TABLE Cliente (
   email VARCHAR(255) NOT NULL,
   dataNascimento DATE NOT NULL,
   sexo CHAR(1) NOT NULL,
+  cliAtivo Boolean, 
   PRIMARY KEY(idCliente)
 );
 
@@ -36,16 +38,11 @@ CREATE TABLE Locacao (
 CREATE TABLE Marca (
   idMarca INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nomeMarca VARCHAR(20) NOT NULL,
+  marcaAtiva boolean,
   PRIMARY KEY(idMarca)
 );
 
-CREATE TABLE Usuario (
-  idUsuario INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  nomeUsuario VARCHAR(45) NOT NULL,
-  usuario VARCHAR(20) NOT NULL,
-  senha VARCHAR(255) NOT NULL,
-  PRIMARY KEY(idUsuario)
-);
+
 
 CREATE TABLE Veiculo (
   idVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -60,14 +57,8 @@ CREATE TABLE Veiculo (
   valorLivre INTEGER UNSIGNED NOT NULL,
   valorKm NUMERIC NOT NULL,
   disponivel BOOLean NULL,
+  veicAtivo boolean,
   PRIMARY KEY(idVeiculo),
   INDEX Veiculo_FKIndex1(marca_idMarca),
   INDEX Veiculo_FKIndex2(categoriaVeiculo_idCatVeiculo)
 );
-
-
-INSERT INTO categoriaVeiculo (descCatVeiculo) VALUES ('Passeio');
-
-INSERT INTO Marca (nomeMarca) VALUES ('GM');
-
-INSERT INTO Veiculo VALUES (1,1,1,'Celta',2015,'Preto',4,'','iep0598',500,50,1);

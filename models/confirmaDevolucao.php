@@ -37,10 +37,8 @@
                                     $KmLivre = $linha['kmLivre'];
                                     $valorLivre =$linha['valorLivre'];
                                     $valorKm = $linha['valorKm'];
-                                    $DtRetirada = date("d/m/Y", strtotime($DtRetirada));
-                                    $DataDevolucao = date("d/m/Y", strtotime($dataDevolucao));
-                                    
-                                    
+                                    //$DtRetirada = date("d/m/Y", strtotime($DtRetirada));
+                                    //$DataDevolucao = date("d/m/Y", strtotime($dataDevolucao));
                                     $diferenca = strtotime($dataDevolucao) - strtotime($DtRetirada);
                                     $dias = floor($diferenca / (60 * 60 * 24));
                                     print("<h3>Dados da Locação:</h3><p>");
@@ -48,10 +46,23 @@
                                     Print ("<b>Cliente:</b> $Cliente<p>");
                                     Print ("<b>Veículo:</b> $Modelo<p>");
                                     Print ("<b>Data de Retirada:</b> $DtRetirada<p>");
-                                    Print ("<b>Data de Devolução:</b> $DataDevolucao<p>");
+                                    Print ("<b>Data de Devolução:</b> $dataDevolucao<p>");
                                     
+                                    if ($linha["kmLivre"] == 1){
+                                    $valor =($valorLivre *$dias);
+                                    Print ("<b>Totais de dias: </b>$dias<p>");
+                                    Print ("<b>Valor: R$ </b> $valor<p>");
+                                    
+                                    
+                                    }Else{
+                                        $kmPercorrido=($KmDevolucao - $KmRetirada);
+                                        $valor = ($valorKm*$kmPercorrido);
+                                        Print ("<b>Total de Km's percorridos: $kmPercorrido<p>");
+                                        Print ("<b>Valor: R$ $valor");
+                                    }
                                     ?>
                                     <script type="text/javascript">alert("Devolução realizada com sucesso!")</script>
+                                    <p><a href="../views/listaVeicDisp.php" class="button_voltar">Voltar</a>
                                 </div>
                             </td></tr>
                     </table>

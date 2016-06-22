@@ -95,6 +95,12 @@
                                     $DtDevolucao = $linha["dataDevolucao"];
                                     $KmRetirada = $linha["kmRetirada"];
                                     $KmDevolucao = $linha["kmDevolucao"];
+                                    $valorLivre = $linha["valorLivre"];
+                                    $valorKm =$linha["valorKm"];
+                                    //calcula a diferença de dias
+                                    $diferenca = strtotime($DtDevolucao) - strtotime($DtRetirada);
+                                    $dias = floor($diferenca / (60 * 60 * 24));
+                                    
                                     $KmDecorrida = $KmDevolucao-$KmRetirada;
                                     if ($KmDecorrida<0){
                                         $KmDecorrida=0;
@@ -105,9 +111,10 @@
                                         $KmLivre="Não";
                                     }
                                     if ($linha["kmLivre"] == 1){
-                                        $valor=$linha["valorLivre"];
+                                        $valor =($valorLivre *$dias);
+                                    
                                     }Else{
-                                        $valor=$linha["valorKm"]*$KmDecorrida;
+                                        $valor = ($valorKm*$KmDecorrida);
                                     }
                                     print("<tr><td align='center'>$Codigo</td>");
                                     print("<td>$Cliente</td>");
@@ -124,7 +131,7 @@
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../index.php" class="button_voltar">Voltar</a></p>
+                                
                             </form>
                         </div>
                     </td></tr>

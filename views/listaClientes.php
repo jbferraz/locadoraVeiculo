@@ -73,7 +73,7 @@
                                 <?php
                                 require("../controller/conecta.inc");
                                 conecta_bd() or die("Não é possível conectar-se ao servidor.");
-                                $resultado = mysql_query("Select * from cliente order by nomeCliente") or die("Não é possível consultar veículos disponiveis.");
+                                $resultado = mysql_query("Select * from cliente where cliAtivo=1 order by nomeCliente") or die("Não é possível consultar veículos disponiveis.");
                                 print("<table border='1' bordercolor='blue'>");
                                 print("<tr><td><b>Código</td>");
                                 print("<td><b>Nome</td>");
@@ -109,8 +109,7 @@
                                 }
                                 print("</table></center>");
                                 ?>
-                                <p><a href="../models/insereCliente.php" class="button_voltar" >Inserir</a></p>
-                                <p><a href="../index.php" class="button_voltar" >Voltar</a></p>
+                                
                             </form>
                         </div>
                     </td></tr>
